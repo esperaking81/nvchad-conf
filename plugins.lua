@@ -131,12 +131,16 @@ local plugins = {
   { "tpope/vim-surround", lazy = false },
   {
     "Pocco81/true-zen.nvim",
+    lazy = false,
     keys = {
       { "<leader>za", ":TZAtaraxis<CR>", "Toggle Ataraxis mode" },
       { "<leader>zm", ":TZMinimalist<CR>", "Toggle minimalist mode" },
       { "<leader>zf", ":TZFocus<CR>", "Toggle minimalist mode" },
       { "<leader>zn", ":TZNarrow<CR>", "Toggle minimalist mode" },
     },
+    config = function()
+      require("true-zen.minimalist").toggle()
+    end,
   },
 
   -- To make a plugin not be loaded
