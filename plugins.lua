@@ -40,6 +40,7 @@ local plugins = {
   },
 
   -- Install a plugin
+  { "windwp/nvim-ts-autotag", config = true, ft = { "typescriptreact", "html", "xml",}, },
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -75,6 +76,7 @@ local plugins = {
             device = false,
           },
         },
+        flutter_path = "/snap/bin/flutter",
         lsp = {
           on_attach = on_attach,
           capabilities = capabilities,
